@@ -18,7 +18,7 @@ The model runs in two steps:
 
 The KG embeddings  of the dataset can be downloaded directly from:
 
-> link：https://pan.baidu.com/s/1wN8iXSzrbflyhJS7CrejXA 
+> link：https://pan.baidu.com/s/1wN8iXSzrbflyhJS7CrejXA   
 > code：tgee 
 
 Please store the KGE files in:  `./data`
@@ -44,7 +44,7 @@ KG embedding training data in `data_preprocessing/zh_en`:
 
 #### 1.2 KG Embedding
 
-Refer to the code in [PR-KGE](https://github.com/krypros/PR-KGE) or [QuatE](https://github.com/cheungdaven/QuatE.
+Refer to the code in [PR-KGE](https://github.com/krypros/PR-KGE) or [QuatE](https://github.com/cheungdaven/QuatE).
 
 ### 2. Multi-view Interaction Model
 
