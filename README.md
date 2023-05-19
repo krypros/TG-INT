@@ -16,6 +16,15 @@ The codebase is implemented in Python 3.6.9. Required packages are:
 The model runs in two steps:
 ### 1. Knowledge graph embedding(QuatAE)
 
+The KG embeddings  of the dataset can be downloaded directly from:
+
+> link：https://pan.baidu.com/s/1wN8iXSzrbflyhJS7CrejXA 
+> code：tgee 
+
+Please store the KGE files in:  `./data`
+
+Or run the code for 1.1 ~ 1.2 below:
+
 #### 1.1 Data Preprocessing
 
 To obtain training data for the knowledge graph joined with the anchor relation: 

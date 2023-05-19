@@ -6,7 +6,7 @@ import pickle
 class Basic_Bert_Unit_model(nn.Module):
     def __init__(self,input_size, result_size):
         super(Basic_Bert_Unit_model,self).__init__()
-        emb_model = torch.load("../data/old_quate_zh200.ckpt", map_location=torch.device('cuda')) #
+        emb_model = torch.load("../data/quate_zh200.ckpt", map_location=torch.device('cuda')) #
         # self.emb_dict = pickle.load("../data/id_emb_dict.pkl")
 
         self.emb_s_a = nn.Embedding(emb_model['emb_s_a.weight'].shape[0], emb_model['emb_s_a.weight'].shape[1])
