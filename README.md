@@ -1,6 +1,6 @@
 # TG-INT
 
-This is code and datasets for BERT-INT
+This is code and datasets for TG-INT
 
 ## Installation
 
@@ -16,9 +16,30 @@ The codebase is implemented in Python 3.6.9. Required packages are:
 The model runs in two steps:
 ### 1. Knowledge graph embedding(QuatAE)
 
-#### 1.1 
+#### 1.1 Data Preprocessing
 
-### 1. Fine-tune Basic Model Unit
+To obtain training data for the knowledge graph joined with the anchor relation: 
+
+```shell
+cd data_preprocessing/
+bash run.sh
+```
+
+KG embedding training data in `data_preprocessing/zh_en`:
+
+- train2idAdd.txt: relation triples encoded by ids in KG (ZH) and (EN)
+- relation2idAdd.txt:  relation ids and relations in KG (ZH) and (EN)
+- entity2id.txt: entity ids and entities in KG (ZH) and (EN)
+- valid2id.txt: 10000 valid triples encoded by ids
+- test2id.txt: 10000 test triples encoded by ids
+
+#### 1.2 KG Embedding
+
+Refer to the code in [PR-KGE](https://github.com/krypros/PR-KGE) or [QuatE](https://github.com/cheungdaven/QuatE.
+
+### 2. Multi-view Interaction Model
+
+#### 2.1. Fine-tune Basic Model Unit
 
 To fine-tune the Basic Model Unit, use: 
 
@@ -31,7 +52,7 @@ Note that `basic_bert_unit/Param.py` is the config file.
 
 The obtained Basic BERT Unit and some other data will be stored in:  `../Save_model`
 
-### 2. Run Text-Graph Interaction Model
+#### 2.2. Run Text-Graph Interaction Model
 
 (Note that when running the Text-Graph Interaction model, the parameters of the Basic Model will **be fixed**.)
 
@@ -92,7 +113,7 @@ The description of the entity is extracted from [DBpedia](https://wiki.dbpedia.o
 
 The code is based on [BERT-INT](https://github.com/kosugi11037/bert-int).
 
-QuatAE is based on [PR-KGE](https://github.com/krypros/PR-KGE) and [Quate](https://github.com/cheungdaven/QuatE).
+QuatAE is based on [PR-KGE](https://github.com/krypros/PR-KGE) and [QuatE](https://github.com/cheungdaven/QuatE).
 
 ### Citation
 
